@@ -1,0 +1,2 @@
+git config --global http.sslVerify false
+git clone https://github.com/021213/c-rus-2022-autumn
