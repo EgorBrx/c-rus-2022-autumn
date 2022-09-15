@@ -7,3 +7,5 @@ git clone https://github.com/021213/c-rus-2022-autumn
 git add --all
 git commit --all --message "Lesson 1 task commit"
 git push
+
+git pull
