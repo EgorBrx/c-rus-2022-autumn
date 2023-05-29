@@ -27,20 +27,20 @@ int main(int argc, char* argv[])
 	std::cin >> n;
 	std::cout << std::endl;
 
-	Point* a = (Point*)malloc(n * sizeof(Point));
+	Point* pointArray = new Point[n];
 
 	for (int i = 0; i < n; ++i)
 	{
 		Point point;
 		std::cin >> point.x >> point.y;
-		a[i] = point;
+		pointArray[i] = point;
 	}
 
 	for (int i = 0; i < n; ++i)
 	{
 		for (int j = n - 1; j > i; --j)
 		{
-			if (a[j - 1].Distance() > a[j].Distance())
+			if (pointArray[j - 1].Distance() > pointArray[j].Distance())
 			{
 				Point temp = a[j - 1];
 				a[j - 1] = a[j];
@@ -51,8 +51,8 @@ int main(int argc, char* argv[])
 
 	for (int i = 0; i < n; ++i)
 	{
-		a[i].PrintPoint();
+		pointArray[i].PrintPoint();
 	}
-	free(a);
+	delete[] pointArray;
 	return EXIT_SUCCESS;
 }
